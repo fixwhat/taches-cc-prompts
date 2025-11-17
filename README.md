@@ -6,7 +6,7 @@ Slash commands and prompt systems for Claude Code.
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/taches-cc-prompts.git
+git clone https://github.com/glittercowboy/taches-cc-prompts.git
 cd taches-cc-prompts
 
 # Install meta-prompting
