@@ -14,13 +14,10 @@ Dream big. Happy building.
 
 ## What's Inside
 
-**[Commands](#commands)** (39 total) - Slash commands that expand into structured workflows
+**[Commands](#commands)** (26 total) - Slash commands that expand into structured workflows
 - **Meta-Prompting**: Separate planning from execution with staged prompts
 - **Todo Management**: Capture context mid-work, resume later with full state
-- **Research**: Technical feasibility, competitive analysis, open-source discovery
-- **Planning**: Project briefs, MVPs, full plans with phases and dependencies
 - **Thinking Models**: Mental frameworks (first principles, inversion, 80/20, etc.)
-- **Extraction**: Pull platform-agnostic specs and UI patterns from codebases
 
 **[Skills](#skills)** (5 total) - Autonomous workflows that research, generate, and self-heal
 - **Create Agent Skills**: Build new skills by describing what you want
@@ -124,34 +121,6 @@ Apply mental frameworks to decisions and problems.
 - [`/consider:10-10-10`](./commands/consider/10-10-10.md) - Evaluate across time horizons
 - [`/consider:opportunity-cost`](./commands/consider/opportunity-cost.md) - Analyze what you give up
 - [`/consider:via-negativa`](./commands/consider/via-negativa.md) - Improve by removing
-
-### Planning
-
-Structure work at any scale.
-
-- [`/plan:brief`](./commands/plan/brief.md) - Problem, goals, constraints, success criteria
-- [`/plan:project`](./commands/plan/project.md) - Full project plan with phases and milestones
-- [`/plan:mvp`](./commands/plan/mvp.md) - Cut to minimum viable scope
-
-### Research
-
-Investigate and analyze.
-
-- [`/research:technical`](./commands/research/technical.md) - How to implement something
-- [`/research:options`](./commands/research/options.md) - Compare alternatives side-by-side
-- [`/research:competitive`](./commands/research/competitive.md) - Who else does this, how
-- [`/research:feasibility`](./commands/research/feasibility.md) - Can we actually do this?
-- [`/research:landscape`](./commands/research/landscape.md) - Map tools, players, trends, gaps
-- [`/research:open-source`](./commands/research/open-source.md) - Find libraries and tools
-- [`/research:history`](./commands/research/history.md) - What's been tried before
-- [`/research:deep-dive`](./commands/research/deep-dive.md) - Comprehensive investigation
-
-### Extraction
-
-Pull patterns from content.
-
-- [`/extract:spec`](./commands/extract/spec.md) - Extract platform-agnostic specification from codebase
-- [`/extract:ui`](./commands/extract/ui.md) - Extract UI/UX design patterns from codebase
 
 ## Agents
 
