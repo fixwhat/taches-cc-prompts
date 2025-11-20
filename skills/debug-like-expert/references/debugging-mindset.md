@@ -1,10 +1,6 @@
-# Debugging Mindset
-
 <philosophy>
 Debugging is applied epistemology. You're investigating a system to discover truth about its behavior. The difference between junior and senior debugging is not knowledge of frameworks - it's the discipline of systematic investigation.
 </philosophy>
-
-## Debugging Code You Wrote
 
 <meta_debugging>
 **Special challenge**: When you're debugging code you wrote or modified, you're fighting your own mental model.
@@ -65,8 +61,6 @@ Not "the requirements were unclear" or "the library is confusing" - YOU made an 
 This intellectual honesty is the difference between debugging for hours and finding bugs quickly.
 </meta_debugging>
 
-## First Principles Thinking
-
 <foundation>
 When debugging, return to foundational truths:
 
@@ -94,7 +88,7 @@ Strip away everything you think you know. Build understanding from observable fa
 ✅ "Let me run EXPLAIN to see the actual execution plan"
 </example>
 
-## Cognitive Biases in Debugging
+<cognitive_biases>
 
 <bias name="confirmation_bias">
 **The problem**: You form a hypothesis and only look for evidence that confirms it.
@@ -128,7 +122,9 @@ Strip away everything you think you know. Build understanding from observable fa
 **The antidote**: Set checkpoints. Every 30 minutes, ask: "If I started fresh right now, is this still the path I'd take?"
 </bias>
 
-## The Discipline of Systematic Investigation
+</cognitive_biases>
+
+<systematic_investigation>
 
 <discipline name="change_one_variable">
 **Why it matters**: If you change multiple things at once, you don't know which one fixed (or broke) it.
@@ -171,7 +167,9 @@ Strip away everything you think you know. Build understanding from observable fa
 **The truth**: "I need to investigate further" is more professional than a wrong fix.
 </discipline>
 
-## When to Stop and Restart
+</systematic_investigation>
+
+<when_to_restart>
 
 <restart_signals>
 You should consider starting over when:
@@ -209,7 +207,7 @@ When restarting:
 This isn't failure. This is professionalism.
 </restart_protocol>
 
-## The Humility of Great Debuggers
+</when_to_restart>
 
 <humility>
 The best debuggers have deep humility about their mental models:
@@ -232,8 +230,6 @@ The best debuggers have deep humility about their mental models:
 - "What haven't I tested?"
 - "What does the evidence actually say?"
 </humility>
-
-## Debugging as Craft
 
 <craft>
 Debugging is a craft that improves with practice:

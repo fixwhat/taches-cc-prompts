@@ -1,10 +1,8 @@
-# When to Research vs When to Reason
 
 <overview>
 Debugging requires both reasoning about code and researching external knowledge. The skill is knowing when to use each. This guide helps you recognize signals that indicate you need external knowledge vs when you can reason through the problem with the code in front of you.
 </overview>
 
-## Signals You Need External Knowledge
 
 <research_signals>
 
@@ -77,7 +75,6 @@ Research needed:
 
 </research_signals>
 
-## Signals You Should Reason Through It
 
 <reasoning_signals>
 
@@ -142,7 +139,6 @@ DO reason through it:
 
 </reasoning_signals>
 
-## Research Strategies
 
 <research_how>
 
@@ -223,7 +219,6 @@ Ask specific questions about the library
 
 </research_how>
 
-## Balancing Research and Reasoning
 
 <balance>
 
@@ -290,7 +285,6 @@ vs
 
 </balance>
 
-## Decision Tree
 
 <decision_tree>
 ```
@@ -316,7 +310,6 @@ Can I observe the behavior directly?
 ```
 </decision_tree>
 
-## Red Flags
 
 <red_flags>
 
@@ -340,7 +333,6 @@ Can I observe the behavior directly?
 
 </red_flags>
 
-## The Research Mindset
 
 <mindset>
 

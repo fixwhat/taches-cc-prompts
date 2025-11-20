@@ -1,10 +1,8 @@
-# Hypothesis Testing in Debugging
 
 <overview>
 Debugging is applied scientific method. You observe a phenomenon (the bug), form hypotheses about its cause, design experiments to test those hypotheses, and revise based on evidence. This isn't metaphorical - it's literal experimental science.
 </overview>
 
-## Forming Falsifiable Hypotheses
 
 <principle name="falsifiability">
 A good hypothesis can be proven wrong. If you can't design an experiment that could disprove it, it's not a useful hypothesis.
@@ -64,7 +62,6 @@ A good hypothesis can be proven wrong. If you can't design an experiment that co
 </example>
 </how_to_form>
 
-## Designing Experiments
 
 <experimental_design>
 An experiment is a test that produces evidence supporting or refuting a hypothesis.
@@ -126,7 +123,6 @@ For each hypothesis, design an experiment:
 </example>
 </experimental_design>
 
-## Evaluating Evidence Quality
 
 <evidence_quality>
 Not all evidence is equal. Learn to distinguish strong from weak evidence.
@@ -173,7 +169,6 @@ for (let i = 0; i < 100; i++) {
 </examples>
 </evidence_quality>
 
-## When You Have Enough Evidence to Act
 
 <decision_point>
 Don't act too early (premature fix) or too late (analysis paralysis).
@@ -222,7 +217,6 @@ Don't act too early (premature fix) or too late (analysis paralysis).
 </example>
 </decision_point>
 
-## Recovering from Wrong Hypotheses
 
 <recovery>
 You will be wrong sometimes. This is normal. The skill is recovering gracefully.
@@ -267,7 +261,6 @@ This is good debugging. Wrong hypothesis, quick recovery, better understanding.
 </example>
 </recovery>
 
-## Multiple Competing Hypotheses
 
 <multiple_hypotheses>
 Don't fall in love with your first hypothesis. Generate multiple alternatives.
@@ -314,7 +307,6 @@ try {
 </example>
 </multiple_hypotheses>
 
-## The Hypothesis Testing Loop
 
 <workflow>
 ```
@@ -340,7 +332,6 @@ try {
 **Key insight**: This is a loop, not a line. You'll cycle through multiple times. That's expected.
 </workflow>
 
-## Common Pitfalls
 
 <pitfalls>
 

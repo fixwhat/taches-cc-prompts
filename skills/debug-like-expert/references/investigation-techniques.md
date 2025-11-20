@@ -1,10 +1,8 @@
-# Investigation Techniques
 
 <overview>
 These are systematic approaches to narrowing down bugs. Each technique is a tool in your debugging toolkit. The skill is knowing which tool to use when.
 </overview>
 
-## Binary Search / Divide and Conquer
 
 <technique name="binary_search">
 **When to use**: Large codebase, long execution path, or many possible failure points.
@@ -43,7 +41,6 @@ You just eliminated 90% of the code in 4 tests.
 **Warning**: Only works for code you can safely comment out. Don't use for initialization code.
 </technique>
 
-## Rubber Duck Debugging
 
 <technique name="rubber_duck">
 **When to use**: You're stuck, confused, or your mental model doesn't match reality.
@@ -73,7 +70,6 @@ Often you'll spot the bug mid-explanation: "Wait, I never actually verified that
 </example>
 </technique>
 
-## Minimal Reproduction
 
 <technique name="minimal_reproduction">
 **When to use**: Complex system, many moving parts, unclear which part is failing.
@@ -116,7 +112,6 @@ The bug was hidden in complexity. Minimal reproduction made it obvious.
 </example>
 </technique>
 
-## Working Backwards from Desired State
 
 <technique name="working_backwards">
 **When to use**: You know what the correct output should be, but don't know why you're not getting it.
@@ -147,7 +142,6 @@ Working backwards revealed the bug was in how the ID was passed to the query.
 </example>
 </technique>
 
-## Differential Debugging
 
 <technique name="differential_debugging">
 **When to use**: Something used to work and now doesn't. A feature works in one environment but not another.
@@ -192,7 +186,6 @@ Result: Now fails locally too
 </example>
 </technique>
 
-## Adding Observability Before Changing Code
 
 <technique name="observability_first">
 **When to use**: Always. Before making any fix.
@@ -243,7 +236,6 @@ console.log('[updateUser] Called from:', new Error().stack);
 Don't code in the dark. Light up the execution path first.
 </technique>
 
-## The "Comment Out Everything" Technique
 
 <technique name="comment_out_everything">
 **When to use**: Many possible interactions, unclear which code is causing the issue.
@@ -272,7 +264,6 @@ app.use(bodyParser.json({ limit: '50mb' })); // Uncomment, test → BREAKS
 </example>
 </technique>
 
-## Git Bisect for Regression Hunting
 
 <technique name="git_bisect">
 **When to use**: Feature worked in the past, broke at some unknown commit.
@@ -282,25 +273,16 @@ app.use(bodyParser.json({ limit: '50mb' })); // Uncomment, test → BREAKS
 **Process**:
 
 ```bash
-# Start bisect
 git bisect start
 
-# Mark current state as bad
 git bisect bad
 
-# Find a commit where it worked, mark as good
 git bisect good abc123
 
-# Git checks out a middle commit
-# Test if the bug exists
-# If bug exists:
 git bisect bad
 
-# If bug doesn't exist:
 git bisect good
 
-# Git automatically narrows down
-# Repeat until it finds the exact breaking commit
 ```
 
 **Why it's powerful**: Turns "it broke sometime in the last 100 commits" into "it broke in commit abc123" in ~7 tests (log₂ 100 ≈ 7).
@@ -314,7 +296,6 @@ Time saved: Massive
 </example>
 </technique>
 
-## Choosing the Right Technique
 
 <decision_tree>
 **Large codebase, many files**:

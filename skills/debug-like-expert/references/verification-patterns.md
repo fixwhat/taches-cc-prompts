@@ -1,10 +1,8 @@
-# Verification Patterns
 
 <overview>
 The most common debugging mistake: declaring victory too early. A fix isn't complete until it's verified. This document defines what "verified" means and provides systematic approaches to proving your fix works.
 </overview>
 
-## What "Verified" Actually Means
 
 <definition>
 A fix is verified when:
@@ -46,7 +44,6 @@ A fix is verified when:
 - "Verified in dev, staging, and production environments"
 </examples>
 
-## Testing the Original Reproduction Steps
 
 <pattern name="reproduction_verification">
 **The golden rule**: If you can't reproduce the bug, you can't verify it's fixed.
@@ -88,7 +85,6 @@ A fix is verified when:
 **Solution**: Revert your fix. If the bug comes back, you've verified your fix addressed it.
 </pattern>
 
-## Regression Testing Adjacent Functionality
 
 <pattern name="regression_testing">
 **The problem**: You fix one thing, break another.
@@ -131,7 +127,6 @@ If you only tested "login works", you missed 6 other things that could break.
 </example>
 </pattern>
 
-## Writing Tests Before Fixing
 
 <pattern name="test_first_debugging">
 **Strategy**: Write a failing test that reproduces the bug, then fix until the test passes.
@@ -185,7 +180,6 @@ If you only tested "login works", you missed 6 other things that could break.
 - One-off data issues
 </pattern>
 
-## Multi-Environment Verification
 
 <pattern name="environment_verification">
 **The trap**: "Works on my machine"
@@ -240,7 +234,6 @@ If you only tested "login works", you missed 6 other things that could break.
 </example>
 </pattern>
 
-## Stability and Consistency Testing
 
 <pattern name="stability_testing">
 **The problem**: It worked once, but will it work reliably?
@@ -254,7 +247,6 @@ If you only tested "login works", you missed 6 other things that could break.
 
 **1. Repeated execution**
 ```bash
-# Run the test 100 times
 for i in {1..100}; do
   npm test -- specific-test.js || echo "Failed on run $i"
 done
@@ -312,13 +304,11 @@ Now it's verified.
 </example>
 </pattern>
 
-## Verification Checklist Template
 
 <checklist>
 Copy this checklist when verifying a fix:
 
 ```markdown
-## Verification: [Bug description]
 
 ### Original Issue
 - [ ] Can reproduce the original bug before the fix
@@ -363,7 +353,6 @@ Copy this checklist when verifying a fix:
 **Do not merge/deploy until all checkboxes are checked.**
 </checklist>
 
-## When NOT to Trust Verification
 
 <distrust>
 Your verification might be wrong if:
@@ -407,7 +396,6 @@ Your verification might be wrong if:
 - "Root cause was X, fix addresses X directly, verified by Y"
 </distrust>
 
-## The Verification Mindset
 
 <mindset>
 **Assume your fix is wrong until proven otherwise.**

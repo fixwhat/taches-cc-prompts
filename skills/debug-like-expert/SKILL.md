@@ -23,8 +23,7 @@ This skill activates when standard troubleshooting has failed. The issue require
 
 <quick_start>
 
-<phase_1>
-**1. Evidence Gathering**
+<evidence_gathering>
 
 Before proposing any solution:
 
@@ -48,10 +47,9 @@ Before proposing any solution:
 
 See [references/when-to-research.md](references/when-to-research.md) for detailed guidance on research strategy.
 
-</phase_1>
+</evidence_gathering>
 
-<phase_2>
-**2. Root Cause Analysis**
+<root_cause_analysis>
 
 **A. Form Hypotheses**
 
@@ -77,10 +75,9 @@ Don't move forward until you can answer:
 - What evidence contradicts other hypotheses?
 - What additional information is needed?
 
-</phase_2>
+</root_cause_analysis>
 
-<phase_3>
-**3. Solution Development**
+<solution_development>
 
 **Only after confirming root cause:**
 
@@ -102,7 +99,7 @@ Don't move forward until you can answer:
 
 See [references/verification-patterns.md](references/verification-patterns.md) for comprehensive verification approaches.
 
-</phase_3>
+</solution_development>
 
 </quick_start>
 
