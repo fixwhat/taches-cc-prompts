@@ -147,7 +147,7 @@ Hierarchical project planning optimized for solo developer + Claude. Create exec
 
 **PLAN.md IS the prompt** - not documentation that gets transformed later. Brief → Roadmap → Research (if needed) → PLAN.md → Execute → SUMMARY.md.
 
-**Domain-aware:** Optionally loads framework-specific expertise from `~/.claude/skills/build/` (e.g., macos-apps, iphone-apps) to make plans concrete instead of generic.
+**Domain-aware:** Optionally loads framework-specific expertise from `~/.claude/skills/build/` (e.g., macos-apps, iphone-apps) to make plans concrete instead of generic. Domain expertise skills are created with [create-agent-skills](#create-agent-skills) - exhaustive knowledge bases (5k-10k+ lines) that make task specifications framework-appropriate.
 
 **Quality controls:** Research includes verification checklists, blind spots review, critical claims audits, and streaming writes to prevent gaps and token limit failures.
 
@@ -157,7 +157,15 @@ See [create-plans README](./skills/create-plans/README.md) for full documentatio
 
 ### [Create Agent Skills](./skills/create-agent-skills/)
 
-Build skills by describing what you want. Asks clarifying questions, researches APIs if needed, and generates properly structured skill files. When things don't work perfectly, `/heal-skill` analyzes what went wrong and updates the skill based on what actually worked.
+Build skills by describing what you want. Asks clarifying questions, researches APIs if needed, and generates properly structured skill files.
+
+**Two types of skills:**
+1. **Task-execution skills** - Regular skills that perform specific operations
+2. **Domain expertise skills** - Exhaustive knowledge bases (5k-10k+ lines) that live in `~/.claude/skills/build/` and provide framework-specific context to other skills like [create-plans](#create-plans)
+
+**Context-aware:** Detects if you're in a skill directory and presents relevant options. Progressive disclosure guides you through complex choices.
+
+When things don't work perfectly, `/heal-skill` analyzes what went wrong and updates the skill based on what actually worked.
 
 Commands: `/create-agent-skill`, `/heal-skill`, `/audit-skill`
 
